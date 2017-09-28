@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+set -e
+
+if packer --version > /dev/null; then
+    echo 'Packer already installed'
+else
+    if ! which brew > /dev/null; then
+        echo 'Installing Homebrew'
+        /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+        echo 'Homebrew installed!'
+    fi
+
+    echo 'Installing Packer.....'
+    brew install 'packer'
+    echo 'Packer installed!'
+fi
+
+if terraform --version > /dev/null; then
+    echo 'Terraform already installed'
+else
+
+    if ! which brew > /dev/null; then
+        echo 'Installing Homebrew'
+        /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+        echo 'Homebrew installed!'
+    fi
+
+    echo 'Installing Terraform.....'
+    brew install 'terraform'
+    echo 'Terraform installed!'
+fi

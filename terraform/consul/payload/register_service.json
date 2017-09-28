@@ -1,0 +1,17 @@
+{
+  "ID": "nginx",
+  "Name": "nginx",
+  "Tags": [
+    "primary",
+    "v1"
+  ],
+  "Address": "ec2-52-87-225-196.compute-1.amazonaws.com",
+  "Port": 80,
+  "EnableTagOverride": false,
+  "Check": {
+    "DeregisterCriticalServiceAfter": "90m",
+    "HTTP": "http://ec2-52-87-225-196.compute-1.amazonaws.com/",
+    "Interval": "10s",
+    "TTL": "15s"
+  }
+}
