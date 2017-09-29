@@ -11,6 +11,8 @@ provider "aws" {
   region = "${var.region}"
 }
 
+// Not recommended to allow all traffic in Prod systems.
+// This is only for the workshop
 resource "aws_security_group" "sg_nginx" {
   name="sg_nginx"
   description = "Allows all traffic"
@@ -42,4 +44,3 @@ resource "aws_instance" "nginx" {
     Name = "nginx-${count.index}"
   }
 }
-

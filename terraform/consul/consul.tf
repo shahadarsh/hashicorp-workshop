@@ -46,9 +46,11 @@ resource "aws_instance" "server" {
   }
 }
 
+// Not recommended to allow all traffic in Prod systems.
+// This is only for the workshop
 resource "aws_security_group" "consul" {
   name = "consul"
-  description = "Consul internal traffic + maintenance."
+  description = "Allows all traffic"
 
   ingress {
     from_port = 0

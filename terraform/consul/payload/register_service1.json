@@ -5,7 +5,7 @@
     "primary",
     "v1"
   ],
-  "Address": "http://ec2-34-227-58-168.compute-1.amazonaws.com.compute-1.amazonaws.com/",
+  "Address": "http://ec2-34-227-58-168.compute-1.amazonaws.com/",
   "Port": 80,
   "EnableTagOverride": false,
   "Check": {

@@ -4,4 +4,3 @@ set -e
 echo "Starting Consul..."
 
 sudo start consul
-
