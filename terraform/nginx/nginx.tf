@@ -13,7 +13,7 @@ provider "aws" {
 
 resource "aws_security_group" "sg_nginx" {
   name="sg_nginx"
-  description = "Allows all inboard traffic"
+  description = "Allows all traffic"
 
   ingress {
     from_port = 0

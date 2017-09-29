@@ -1,16 +1,16 @@
 {
-  "ID": "nginx",
+  "ID": "nginx1",
   "Name": "nginx-svc",
   "Tags": [
     "primary",
     "v1"
   ],
-  "Address": "http://ec2-54-236-252-203.compute-1.amazonaws.com/",
+  "Address": "http://ec2-34-227-58-168.compute-1.amazonaws.com.compute-1.amazonaws.com/",
   "Port": 80,
   "EnableTagOverride": false,
   "Check": {
     "DeregisterCriticalServiceAfter": "90m",
-    "HTTP": "http://ec2-54-236-252-203.compute-1.amazonaws.com/",
+    "HTTP": "http://ec2-34-227-58-168.compute-1.amazonaws.com/",
     "Interval": "10s",
     "TTL": "0s"
   }
