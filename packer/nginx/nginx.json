@@ -18,13 +18,13 @@
   "provisioners": [
     {
       "type": "shell",
-      "script": "scripts/default.sh",
-      "execute_command": "chmod +x {{ .Path }}; {{ .Vars }} sudo -E '{{ .Path }}'"
+      "script": "shell/default.sh",
+      "pause_before": "10s"
     },
     {
-      "type": "shell",
-      "script": "scripts/nginx.sh",
-      "execute_command": "chmod +x {{ .Path }}; {{ .Vars }} sudo -E '{{ .Path }}'"
+      "type": "ansible-local",
+      "galaxy_file": "ansible/requirements.yml",
+      "playbook_file": "ansible/nginx.yml"
     }
   ]
 }
