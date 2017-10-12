@@ -8,49 +8,10 @@ Exercises for hashicorp-workshop
 2. Save "Access key ID" & "Secret access key" somewhere
 
 #### Build AMI using Packer
-1. Edit packer_vars.json with aws access & secret keys. Make sure you don't commit that file.
-2. Go to nginx directory
-3. packer validate nginx.json
-4. packer build -var-file=../packer_vars.json nginx.json
+Follow instructions in Packer directory README
    
-#### Provision EC2 instance using AMI
-1. Create Key key_hashicorp
-2. chmod 400 key_hashicorp.pem
-2. Edit terraform.tfvars with aws access, secret keys & key path. Make sure you don't commit that file.
-3. Go to terraform/nginx directory
-4. terraform init
-5. terraform plan \
-   -var-file="../terraform.tfvars" \
-   -var 'ami=ami_created_above' 
-6. terraform apply \
-   -var-file="../terraform.tfvars" \
-   -var 'ami=ami_created_above'
-7. Browse to Public DNS for each instance to see nginx welcome page
-
-#### Setup Consul using Terraform
-1. Go to terraform/consul directory
-2. terraform init
-3. terraform plan \
-      -var-file="../terraform.tfvars"
-4. terraform apply \
-      -var-file="../terraform.tfvars"
-5. Verify UI comes up http://${public_dns}:8500/
-
-#### Try Key Value Store in Consul
-1. curl http://${public_dns}:8500/v1/agent/members
-2. curl \
-       --request PUT \
-       --data 'value' \
-       http://${public_dns}:8500/v1/kv/wrkshop_key
-
-#### Try Service Discovery in Consul
-1. Go to payload directory
-2. curl \
-       --request PUT \
-       --data @register_service.json \
-       http://${public_dns}:8500/v1/agent/service/register
-       
-3. dig @34.202.231.107 -p 8600 nginx-svc12.service.consul SRV
+#### Use Terraform to provision EC2 instances
+Follow instructions in Terraform directory README
 
 #### Destroy all instances/AMI 
 1. Go to terraform/consul directory
