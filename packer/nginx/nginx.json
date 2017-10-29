@@ -25,6 +25,15 @@
       "type": "ansible-local",
       "galaxy_file": "ansible/requirements.yml",
       "playbook_file": "ansible/nginx.yml"
+    },
+    {
+      "type": "file",
+      "source": "tests/goss.yaml",
+      "destination": "/tmp/goss.yaml"
+    },
+    {
+      "type": "shell",
+      "inline": "cd /tmp/ && goss validate && rm /tmp/goss.yaml"
     }
   ]
 }
