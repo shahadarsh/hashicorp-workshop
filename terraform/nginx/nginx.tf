@@ -35,6 +35,7 @@ resource "aws_security_group" "sg_nginx" {
 resource "aws_instance" "nginx" {
   ami = "${var.ami}"
   instance_type = "t2.micro"
+  iam_instance_profile = "consul-test"
   count = "3"
   key_name = "key_hashicorp"
   security_groups = ["sg_nginx"]

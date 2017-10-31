@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe security_group('sg_nginx'), region: 'us-east-1' do
-  it { should exist}
+  it { should exist }
 end
 
 describe ec2('nginx-0'), region: 'us-east-1' do

@@ -15,11 +15,11 @@ Follow instructions in Terraform directory README
 
 #### Destroy all instances/AMI 
 1. Go to terraform/consul directory
-2. terraform plan -destroy -var-file="../terraform.tfvars" -var "ami=${ami_id}"
-3. terraform destroy -var-file="../terraform.tfvars" -var "ami=${ami_id}"
+2. `terraform plan -destroy -var-file="../terraform.tfvars" -var "ami=${ami_id}"`
+3. `terraform destroy -var-file="../terraform.tfvars" -var "ami=${ami_id}"`
 
 4. Go to terraform/nginx directory
-5. terraform plan -destroy -var-file="../terraform.tfvars" -var "ami=${ami_id}"
-6. terraform destroy -var-file="../terraform.tfvars" -var "ami=${ami_id}"
+5. `terraform plan -destroy -var-file="../terraform.tfvars" -var "ami=${ami_id}"`
+6. `terraform destroy -var-file="../terraform.tfvars" -var "ami=${ami_id}"`
 
-7. aws ec2 deregister-image --image-id ${ami_id}
+7. `aws ec2 deregister-image --image-id ${ami_id}`
