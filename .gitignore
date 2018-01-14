@@ -11,3 +11,5 @@
 
 # Variable values for development
 terraform.tfvars
+
+packer/.DS_Store

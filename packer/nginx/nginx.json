@@ -18,13 +18,13 @@
   "provisioners": [
     {
       "type": "shell",
-      "script": "shell/default.sh",
+      "script": "provisioners/shell/default.sh",
       "pause_before": "10s"
     },
     {
       "type": "ansible-local",
-      "galaxy_file": "ansible/requirements.yml",
-      "playbook_file": "ansible/nginx.yml"
+      "galaxy_file": "provisioners/ansible/requirements.yml",
+      "playbook_file": "provisioners/ansible/nginx.yml"
     },
     {
       "type": "file",
