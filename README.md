@@ -1,17 +1,18 @@
 # HashiCorp Workshop
 Exercises for Hashicorp Workshop
 
-###Prerequisites
+### Prerequisites
 
 #### Create AWS account
-1. All exercises require an AWS account so create an account if you don't have it 
+All exercises require an AWS account so create an account if you don't have it 
 
 #### Create IAM user
-1. Create a user with name "usr_hashicorp" with Programmatic access & in Admin group
+1. Go to your AWS console & create IAM user by following instructions [here](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html)
+2. Create a user with name "usr_hashicorp" with Programmatic access & in Admin group
 2. Save "Access key ID" & "Secret access key" somewhere locally
 
 #### Install AWS CLI 
-1. Install AWS CLI following instructions [here](https://docs.aws.amazon.com/cli/latest/userguide/installing.html)
+Install AWS CLI following instructions [here](https://docs.aws.amazon.com/cli/latest/userguide/installing.html)
 
 ### Workshop Steps
 
