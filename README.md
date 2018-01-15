@@ -1,11 +1,23 @@
-# hashicorp-workshop
-Exercises for hashicorp-workshop
+# HashiCorp Workshop
+Exercises for Hashicorp Workshop
 
-### Steps
+###Prerequisites
+
+#### Create AWS account
+1. All exercises require an AWS account so create an account if you don't have it 
 
 #### Create IAM user
-1. Create a user with name "usr_consul" with Programmatic access & in Admin group
-2. Save "Access key ID" & "Secret access key" somewhere
+1. Create a user with name "usr_hashicorp" with Programmatic access & in Admin group
+2. Save "Access key ID" & "Secret access key" somewhere locally
+
+#### Install AWS CLI 
+1. Install AWS CLI following instructions [here](https://docs.aws.amazon.com/cli/latest/userguide/installing.html)
+
+### Workshop Steps
+
+#### Configure AWS CLI with a profile 
+Configure AWS CLI by typing `aws configure` in your terminal & following the instructions
+This profile will be used for access_key, secret_key etc.
 
 #### Build AMI using Packer
 [Read Here](packer/README.md)
@@ -16,10 +28,6 @@ Exercises for hashicorp-workshop
 [Testing for Terraform](terraform/tests/README.md)
 
 #### Destroy all instances/AMI 
-1. Go to terraform/consul directory
-2. `terraform plan -destroy -var-file="../terraform.tfvars" -var "ami=${ami_id}"`
-3. `terraform destroy -var-file="../terraform.tfvars" -var "ami=${ami_id}"`
-
 4. Go to terraform/nginx directory
 5. `terraform plan -destroy -var-file="../terraform.tfvars" -var "ami=${ami_id}"`
 6. `terraform destroy -var-file="../terraform.tfvars" -var "ami=${ami_id}"`
