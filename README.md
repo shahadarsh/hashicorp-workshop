@@ -13,7 +13,7 @@ Exercises for hashicorp-workshop
 #### Use Terraform to provision EC2 instances
 [Read Here](terraform/README.md)
 
-[Testing for Terraform](terraform/nginx/tests/README.md)
+[Testing for Terraform](terraform/tests/README.md)
 
 #### Destroy all instances/AMI 
 1. Go to terraform/consul directory
@@ -25,3 +25,7 @@ Exercises for hashicorp-workshop
 6. `terraform destroy -var-file="../terraform.tfvars" -var "ami=${ami_id}"`
 
 7. `aws ec2 deregister-image --image-id ${ami_id}`
+
+8. Go to terraform/vpc directory
+9. `terraform plan -destroy`
+10. `terraform destroy`
