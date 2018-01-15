@@ -8,10 +8,12 @@ Exercises for hashicorp-workshop
 2. Save "Access key ID" & "Secret access key" somewhere
 
 #### Build AMI using Packer
-Follow instructions in Packer directory README
+[Read Here](packer/README.md)
    
 #### Use Terraform to provision EC2 instances
-Follow instructions in Terraform directory README
+[Read Here](terraform/README.md)
+
+[Testing for Terraform](terraform/nginx/tests/README.md)
 
 #### Destroy all instances/AMI 
 1. Go to terraform/consul directory
